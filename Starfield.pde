@@ -1,10 +1,10 @@
-NormalParticle [] spot;
+Particle [] spot;
 void setup()
 {
 	size(400,400);
-	background(0,225,0);
+	
 
-	spot=new NormalParticle[500];
+	spot=new NormalParticle[400];
 	for(int i=0;i<spot.length;i++){
 
 		spot[i]=new NormalParticle();
@@ -13,14 +13,14 @@ void setup()
 
 }
 void draw()
-{
+{background(0,225,0);
 	for(int i=0;i<spot.length;i++){
 
 		spot[i].move();
 		spot[i].show();
 	}
 }
-class NormalParticle
+class NormalParticle implements Particle
 {
 	double myx, myy, angle, speed;
 
@@ -29,23 +29,23 @@ class NormalParticle
 
 		myx=200;
 		myy=200;
-		angle=Math.random()*(Math.TWO_PI());
+		angle=(Math.random())*2*(Math.PI);
 		speed=(Math.random()*10)+1;
 
 
 	}
-	void move(){
+	public void move(){
  
 
-		x=x+speed*Math.cos(angle);
-		y=y+speed*Math.sin(angle);
+		myx=myx+speed*Math.cos(angle);
+		myy=myy+speed*Math.sin(angle);
 
 	}
 
 
-	void show(){
+	public void show(){
 
-		fill((int)((Math.random()*125)+1),(int)((Math.random()*125)+1),(int)((Math.random()*225)+1));
+		fill((float)myx,(float)myy,(float)(myx+myy));
 
 		ellipse((float)myx,(float) myy, 10, 10);
 
@@ -54,14 +54,52 @@ class NormalParticle
 }
 interface Particle
 {
-	//your code here
+	public void move();
+	public void show();
 }
-class OddballParticle //uses an interface
+class OddballParticle implements Particle
 {
-	//your code here
+	Boolean ti=true;
+	Boolean up=true;
+	public void move(){
+
+		if(ti==true)
+		myx+=5;
+
+		if(ti==true)
+		myx-=5;
+
+		if(ti==true)
+		myy+=5;
+
+		if(ti==true)
+		myy-=5;
+
+
+		if(myx>400)
+			ti=false;
+		if(myx<0)
+			ti=true;
+		if(myy>400)
+			ti=false;
+		if(myy<0)
+			ti=true;
+
+	}
+	public void show(){
+
+
+
+
+	}
 }
-class JumboParticle //uses inheritance
+class JumboParticle implements Particle
 {
-	//your code here
+	public void move(){
+
+
+
+	}
+	public void show(){}
 }
 
