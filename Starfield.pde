@@ -53,8 +53,11 @@ class NormalParticle implements Particle
 		
 
 			if(myx>400||myx<0||myy>400||myy<0){
-				myx=(Math.random()*41)+180;
-		myy= 200+Math.sqrt(400-(200-myx)*(200-myx));}
+				/*myx=(Math.random()*41)+180;
+		myy= 200+Math.sqrt(400-(200-myx)*(200-myx));*/
+		myx=mouseX; 
+			myy=mouseY;
+	}
 			
 		
 	}
@@ -128,3 +131,4 @@ class JumboParticle extends NormalParticle
 	}
 }
 
+ 
