@@ -25,8 +25,8 @@ void draw()
 }
 class NormalParticle implements Particle
 {
-	double myx, myy, angle;
-	int speed;
+	double myx, myy, angle,
+	 speed;
 
 	NormalParticle()
 	{
@@ -36,7 +36,7 @@ class NormalParticle implements Particle
 		
 		
 		angle=(Math.random())*2*(Math.PI); 
-		speed=(int)(Math.random()*10)+1;
+		speed=(Math.random()*10)+1;
 
 
 	}
@@ -67,7 +67,7 @@ class NormalParticle implements Particle
 
 		noStroke();
 
-		fill((float)myx,(float)myy,(float)(myx+myy));
+		fill((float)myx/2,(float)myy/2,(float)((myx+myy)/2));
 
 		ellipse((float)myx,(float) myy, 10, 10);
 
