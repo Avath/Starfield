@@ -8,7 +8,8 @@ void setup()
 	spot[0]=new OddballParticle();
 	spot[1]=new OddballParticle();
 	spot[2]=new JumboParticle();
-	for(int i=3;i<spot.length;i++){
+	spot[3]=new JumboParticle();
+	for(int i=4;i<spot.length;i++){
 
 		spot[i]=new NormalParticle();
 	}
