@@ -1,13 +1,14 @@
 Particle [] spot;
 void setup()
-{background(0);
+{
 	size(800,800);
 	
 
 	spot=new Particle[2000];
 	spot[0]=new OddballParticle();
-	spot[1]=new JumboParticle();
-	for(int i=2;i<spot.length;i++){
+	spot[1]=new OddballParticle();
+	spot[2]=new JumboParticle();
+	for(int i=3;i<spot.length;i++){
 
 		spot[i]=new NormalParticle();
 	}
@@ -15,7 +16,7 @@ void setup()
 
 }
 void draw()
-{
+{background(0);
 	for(int i=0;i<spot.length;i++){
 
 		spot[i].move();
@@ -82,8 +83,8 @@ class OddballParticle implements Particle
 {
 	Boolean ti=true;
 	Boolean up=true;
-	int myx2=0;
-	int myy2=200;  
+	int myx2=(int)(Math.random()*401);
+	int myy2=(int)(Math.random()*401);  
 	public void move(){
 
 		if(ti==true)
