@@ -1,10 +1,10 @@
 Particle [] spot;
 void setup()
 {
-	size(1000,1000);
+	size(800,800);
 	
 
-	spot=new Particle[4000];
+	spot=new Particle[2000];
 	spot[0]=new OddballParticle();
 	spot[1]=new JumboParticle();
 	for(int i=2;i<spot.length;i++){
@@ -31,7 +31,7 @@ class NormalParticle implements Particle
 	{
 
 		myx=(Math.random()*41)+180;
-		myy= -1*(500+Math.sqrt(400-(500-myx)*(500-myx)));
+		myy= -1*(400+Math.sqrt(400-(400-myx)*(400-myx)));
 		
 		
 		angle=(Math.random())*2*(Math.PI); 
@@ -52,7 +52,7 @@ class NormalParticle implements Particle
 			}
 		
 
-			if(myx>1000||myx<0||myy>1000||myy<0){
+			if(myx>800||myx<0||myy>800||myy<0){
 				
 		myx=mouseX; 
 			myy=mouseY;
@@ -99,11 +99,11 @@ class OddballParticle implements Particle
 		myy2-=20;
 
 
-		if(myx2>1000)
+		if(myx2>800)
 			ti=false;
 		if(myx2<0)
 			ti=true;
-		if(myy2>1000)
+		if(myy2>800)
 			up=false;
 		if(myy2<0)
 			up=true;
