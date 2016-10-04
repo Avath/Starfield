@@ -1,6 +1,6 @@
 Particle [] spot;
 void setup()
-{
+{background(0);
 	size(800,800);
 	
 
@@ -15,7 +15,7 @@ void setup()
 
 }
 void draw()
-{background(0);
+{
 	for(int i=0;i<spot.length;i++){
 
 		spot[i].move();
