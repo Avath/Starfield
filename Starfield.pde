@@ -43,7 +43,7 @@ class NormalParticle implements Particle
 	{
 
 		myx=(Math.random()*41)+180;
-		myy= -1*(400+Math.sqrt(400-(400-myx)*(400-myx)));
+		myy= (400+Math.sqrt(400-(400-myx)*(400-myx)));
 		
 		
 		angle=(Math.random())*2*(Math.PI); 
