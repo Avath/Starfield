@@ -22,7 +22,7 @@ void draw()
 
 		spot[i].move();
 		spot[i].show();
-	}
+	} 
 }
 class NormalParticle implements Particle
 {
@@ -54,11 +54,11 @@ class NormalParticle implements Particle
 			}
 		
 
-			if(myx>800||myx<0||myy>800||myy<0){
+			/*if(myx>800||myx<0||myy>800||myy<0){
 				
 		myx=mouseX; 
 			myy=mouseY;
-	}
+	}*/
 			
 		
 	}
