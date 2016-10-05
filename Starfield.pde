@@ -54,11 +54,7 @@ class NormalParticle implements Particle
 			}
 		
 
-			/*if(myx>800||myx<0||myy>800||myy<0){
-				
-		myx=mouseX; 
-			myy=mouseY;
-	}*/
+			
 			
 		
 	}
@@ -127,7 +123,7 @@ class JumboParticle extends NormalParticle
 
 	fill((float)(Math.random()*226),(float)(Math.random()*226),(float)(Math.random()*226));
 
-		ellipse((float)myx,(float) myy, 70, 70);
+		ellipse((float)myx,(float) myy, 30, 30);  
 
 	}
 }
