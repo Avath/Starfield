@@ -1,4 +1,6 @@
 Particle [] spot;
+int q=0;
+Boolean a = true;
 void setup()
 {
 	size(800,800);
@@ -17,12 +19,20 @@ void setup()
 
 }
 void draw()
-{background(0);
+{background(q);
 	for(int i=0;i<spot.length;i++){
 
 		spot[i].move();
 		spot[i].show();
 	} 
+	if(q==0)
+		 a =true;
+	if(a==true)
+			q++;
+	if(q==225)
+		 a = false;
+	if(a==false)
+		q--;
 }
 class NormalParticle implements Particle
 {
