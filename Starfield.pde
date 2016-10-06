@@ -91,8 +91,8 @@ class OddballParticle implements Particle
 {
 	Boolean ti=true;
 	Boolean up=true;
-	int myx2=(int)(Math.random()*401);
-	int myy2=(int)(Math.random()*401);  
+	int myx2=(int)(Math.random()*801);
+	int myy2=(int)(Math.random()*801);  
 	public void move(){
 
 		if(ti==true)
