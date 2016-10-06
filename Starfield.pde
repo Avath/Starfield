@@ -56,6 +56,7 @@ class NormalParticle implements Particle
 
 		myx=myx+speed*Math.cos(angle);
 		myy=myy+speed*Math.sin(angle);
+		angle+=0.02;
 
 		if(mousePressed) {
 
